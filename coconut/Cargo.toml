@@ -1,0 +1,31 @@
+[package]
+name = "coconut_sig"
+version = "0.2.2"
+authors = ["lovesh <lovesh.bond@gmail.com>", "jsarihan <jsarihan@gmail.com>"]
+edition = "2018"
+description = "Coconut: Threshold Issuance Selective Disclosure Credentials with Applications to Distributed Ledgers"
+license = "Apache-2.0"
+repository = "https://github.com/lovesh/coconut-rust"
+
+[patch.crates-io]
+zeroize = { path = '../zeroize' }
+
+[dependencies]
+rand = { version = "0.7", features = ["wasm-bindgen"] }
+failure = "0.1.5"
+serde = {version = "1.0", features = ["derive"]}
+serde_derive = "1.0"
+secret_sharing = "0.1.1"
+ps_sig = "0.2.0"
+
+
+[dependencies.amcl_wrapper]
+version = "0.2.3"
+default-features = false
+features = ["bls381"]
+
+
+[features]
+default = ["SignatureG2"]
+SignatureG1 = []
+SignatureG2 = []

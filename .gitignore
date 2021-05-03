@@ -1,0 +1,9 @@
+/target
+**/*.rs.bk
+Cargo.lock
+bin/
+pkg/
+wasm-pack.log
+coconut/target/*
+zeroize/*
+zeroize_derive/*
